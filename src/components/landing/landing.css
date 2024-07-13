@@ -1,0 +1,43 @@
+.landing-main {
+  background-color: #e5e5e5;
+  height: calc(100dvh - 5.6rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .headline {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 2.5;
+    text-align: center;
+
+    .sub-headline {
+      font-size: 25px;
+      font-weight: 500;
+    }
+  }
+
+  .benefits {
+    margin-top: 3rem;
+    font-size: 20px;
+    line-height: 2;
+    font-weight: 500;
+
+    ul {
+      list-style-type: none;
+      counter-reset: item -1;
+
+      li:before {
+        content: counter(item) ". ";
+        counter-increment: item;
+      }
+
+      li {
+        font-size: 18px;
+        line-height: 2;
+      }
+    }
+  }
+}
